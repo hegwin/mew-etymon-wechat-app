@@ -50,5 +50,9 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  
+  searchEtymon: function(e) {
+    console.log(e.detail.value);
   }
 })

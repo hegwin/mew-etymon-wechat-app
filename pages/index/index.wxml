@@ -7,7 +7,7 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="section">
+    <input focus="true" type="text" confirm-type="search" bindconfirm="searchEtymon" />
   </view>
 </view>
