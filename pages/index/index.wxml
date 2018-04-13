@@ -10,4 +10,7 @@
   <view class="section">
     <input focus="true" type="text" confirm-type="search" bindconfirm="searchEtymon" />
   </view>
+  <view wx:for="{{etymons}}" wx:key="unique">
+    {{item.spelling}} {{item.meaning}}
+  </view>
 </view>

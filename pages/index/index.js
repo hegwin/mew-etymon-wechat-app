@@ -7,7 +7,8 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    etymons: []
   },
   //事件处理函数
   bindViewTap: function() {
@@ -53,6 +54,29 @@ Page({
   },
   
   searchEtymon: function(e) {
-    console.log(e.detail.value);
+    let q = e.detail.value;
+    let queryString = `
+      query{
+        etymonsSearch(spelling_cont: "${q}") {
+          id
+          spelling
+          meaning
+        }
+      }
+    `;
+    wx.request({
+      url: app.globalData.graphURL,
+      data: {
+        query: queryString
+      },
+      method: 'POST',
+      dataType: "json",
+      success: (res) => {
+        let etymons = res.data.data.etymonsSearch;
+        this.setData({
+          etymons
+        })
+      }
+    })
   }
 })
