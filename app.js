@@ -35,6 +35,6 @@ App({
   },
   globalData: {
     userInfo: null,
-    graphURL: 'http://www.etymon.online/graphql'
+    graphURL: 'https://www.etymon.online/graphql'
   }
 })
