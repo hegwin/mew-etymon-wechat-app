@@ -1,5 +1,6 @@
 <!--index.wxml-->
 <view class="container">
+  <!--
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -7,10 +8,16 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
+
+  <image src="../assets/icon.png" class="icon"/>
+  -->
   <view class="section">
-    <input focus="true" type="text" confirm-type="search" bindconfirm="searchEtymon" />
+    <input focus="true" type="text" confirm-type="search" bindconfirm="searchEtymon" class="input-etymon-query" placeholder="输入词根进行查询…" />
   </view>
-  <view wx:for="{{etymons}}" wx:key="unique">
-    {{item.spelling}} {{item.meaning}}
-  </view>
+  <scroll-view class="section results">
+    <view wx:for="{{etymons}}" wx:key="unique" class="etymon">
+      <text class="spelling">{{item.spelling}}</text>
+      <text class="meaning">{{item.meaning}}</text>
+    </view>
+  </scroll-view>
 </view>

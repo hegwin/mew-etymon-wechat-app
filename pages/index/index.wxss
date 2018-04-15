@@ -1,17 +1,32 @@
 /**index.wxss**/
-.userinfo {
+.input-etymon-query {
+  color: #aaa;
+  border: #ffe2bf solid 1px;
+  height: 1.6em;
+  width: 550rpx;
+  margin: 50rpx 100rpx;
+  border-radius: 0.3em;
+  font-size: 1em;
+  padding: 0.1em 0.3em;
+  box-shadow: #ffa940 0 0 2px;
+}
+
+.results {
+  margin: 20rpx 60rpx;
+}
+
+.results .etymon {
+  padding: 8rpx 0;
+  border-bottom: 1px #ffe2bf dashed;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.results .etymon .spelling {
+  color: #ff8c00;
 }
 
-.userinfo-nickname {
-  color: #aaa;
+.results .etymon .meaning {
+  color: #BBB;
+  font-size: 0.9em;
 }
