@@ -65,7 +65,7 @@ Page({
       }
     `;
     wx.request({
-      url: app.globalData.graphURL,
+      url: app.config.graphURL,
       data: {
         query: queryString
       },

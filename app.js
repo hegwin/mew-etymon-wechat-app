@@ -1,4 +1,9 @@
 //app.js
+
+const { config } = require('./config.js');
+
+console.log(config);
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -34,7 +39,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
-    graphURL: 'https://www.etymon.online/graphql'
-  }
+    userInfo: null
+  },
+  config: config
 })
