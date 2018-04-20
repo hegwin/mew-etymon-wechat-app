@@ -1,0 +1,30 @@
+.etymon-spelling {
+  padding: 30rpx 40rpx;
+  font-size: 48rpx;
+  color: #FF8C00;
+}
+
+.etymon-info {
+  font-size: 28rpx;
+  margin: 10rpx 42rpx 14rpx;
+}
+
+.etymon-info .title {
+  color: #AB5C02;
+  padding-bottom: 14rpx;
+  border-bottom: 1px dashed #FFE2BF;
+  margin-bottom: 8rpx;
+}
+
+.etymon-info .info {
+  color: #666666;
+}
+
+.etymon-info .info .paragraph:not(:last-child) {
+  margin-bottom: 10rpx;
+}
+
+.word .spelling {
+  color: #FF8C00;
+  margin-right: 28rpx;
+}

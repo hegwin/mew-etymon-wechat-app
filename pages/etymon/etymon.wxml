@@ -1,0 +1,53 @@
+<wxs src="../../helpers/etymon.wxs" module="helper" />
+
+<view class="container">
+  <view class="section etymon-spelling">
+    {{etymon.spelling}}
+  </view>
+
+  <!-- meaning -->
+  <view class="section etymon-info">
+    <view class="title">
+      解释
+    </view>
+    <view class="info">
+      {{etymon.meaning}}
+    </view>
+  </view>
+
+  <!-- source -->
+  <view class="section etymon-info">
+    <view class="title">
+      来源
+    </view>
+    <view class="info">
+      {{etymon.source || "Uncertain"}}
+    </view>
+  </view>
+
+  <!-- evolution -->
+  <view class="section etymon-info">
+    <view class="title">
+      演化
+    </view>
+    <view class="info">
+      <view wx:for="{{helper.splitTextToParagraph(etymon.evolution)}}" wx:key="unique" class="paragraph">
+        {{item}}
+      </view>
+    </view>
+  </view>
+
+  <!-- words -->
+  <view class="section etymon-info">
+    <view class="title">
+      相关单词
+    </view>
+    <view class="info">
+      <navigator wx:for="{{etymon.words}}" wx:key="id" wx:for-item="word" class="word" url="" hover-class="none">
+        <text class="spelling">{{word.spelling}}</text>
+        <text class="meaning">{{word.meaning || ""}}</text>
+      </navigator>
+    </view>
+  </view>
+
+</view>

@@ -14,10 +14,10 @@
   <view class="section">
     <input focus="true" type="text" confirm-type="search" bindconfirm="searchEtymon" class="input-etymon-query" placeholder="输入词根进行查询…" />
   </view>
-  <scroll-view class="section results">
-    <view wx:for="{{etymons}}" wx:key="unique" class="etymon">
-      <text class="spelling">{{item.spelling}}</text>
-      <text class="meaning">{{item.meaning}}</text>
-    </view>
+  <scroll-view scroll-y class="section results">
+    <navigator wx:for="{{etymons}}" wx:key="id" wx:for-item="etymon" class="etymon" url="/pages/etymon/etymon?id={{etymon.id}}">
+      <text class="spelling">{{etymon.spelling}}</text>
+      <text class="meaning">{{etymon.meaning}}</text>
+    </navigator>
   </scroll-view>
 </view>

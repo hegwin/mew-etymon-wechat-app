@@ -1,13 +1,13 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/etymon/etymon",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ff8c00",
     "navigationBarTitleText": "喵呜词根",
-    "navigationBarTextStyle":"white"
+    "navigationBarTextStyle": "white"
   }
 }
