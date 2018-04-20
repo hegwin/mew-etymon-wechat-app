@@ -8,7 +8,9 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    etymons: []
+    etymons: [],
+    query: null,
+    searched: false
   },
   //事件处理函数
   bindViewTap: function() {
@@ -74,7 +76,9 @@ Page({
       success: (res) => {
         let etymons = res.data.data.etymonsSearch;
         this.setData({
-          etymons
+          etymons,
+          searched: true,
+          query: q
         })
       }
     })

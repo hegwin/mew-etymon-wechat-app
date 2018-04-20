@@ -1,4 +1,6 @@
 <!--index.wxml-->
+<wxs src="./index.wxs" module="helper" />
+
 <view class="container">
   <!--
   <view class="userinfo">
@@ -19,5 +21,9 @@
       <text class="spelling">{{etymon.spelling}}</text>
       <text class="meaning">{{etymon.meaning}}</text>
     </navigator>
+
+    <view wx:if="{{helper.noMatched(searched, etymons)}}" class="notice">
+      抱歉，本喵暂未收录词根或单词<text class="highlight">{{query}}</text>，我们正在尽力完善数据库，喵嗷~
+    </view>
   </scroll-view>
 </view>

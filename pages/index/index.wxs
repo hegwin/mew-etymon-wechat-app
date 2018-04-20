@@ -1,0 +1,5 @@
+module.exports = {
+  noMatched: function(searchedFlag, resultArr) {
+    return searchedFlag && resultArr.length === 0 
+  }
+}

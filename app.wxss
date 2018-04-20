@@ -13,3 +13,14 @@
 .section {
   width: 100%;
 }
+
+.notice {
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.notice .highlight {
+  color: #FF8C00;
+  margin-left: 4rpx;
+  margin-right: 4rpx;
+}

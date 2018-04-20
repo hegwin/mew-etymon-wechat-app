@@ -1,6 +1,6 @@
 /**index.wxss**/
 .input-etymon-query {
-  color: #aaa;
+  color: #666666;
   border: #ffe2bf solid 1px;
   height: 1.6em;
   width: 550rpx;
@@ -23,7 +23,7 @@
 }
 
 .results .etymon .spelling {
-  color: #ff8c00;
+  color: #FF8C00;
 }
 
 .results .etymon .meaning {
