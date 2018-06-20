@@ -30,3 +30,24 @@
   color: #BBB;
   font-size: 0.9em;
 }
+
+.searching-indicator {
+  margin-top: 14rpx;
+  text-align: center;
+  animation-name: spin;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.searching-indicator image {
+  height: 24px;
+  width: 24px;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+    transform-origin: 50% 35%;
+  }
+}

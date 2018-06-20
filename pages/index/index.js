@@ -10,7 +10,8 @@ Page({
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     etymons: [],
     query: null,
-    searched: false
+    searched: false,
+    searching: false
   },
   //事件处理函数
   bindViewTap: function() {
@@ -66,6 +67,7 @@ Page({
         }
       }
     `;
+    this.setData({ searching: true, searched: false });
     wx.request({
       url: app.config.graphURL,
       data: {
@@ -73,6 +75,9 @@ Page({
       },
       method: 'POST',
       dataType: "json",
+      complete: ()=> {
+        this.setData({ searching: false })
+      },
       success: (res) => {
         let etymons = res.data.data.etymonsSearch;
         this.setData({
