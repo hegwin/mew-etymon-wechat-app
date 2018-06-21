@@ -1,18 +1,14 @@
 <wxs src="../../helpers/etymon.wxs" module="helper" />
 
 <view class="container">
-  <view class="section etymon-spelling">
-    {{etymon.spelling}}
-  </view>
+  <view class="section etymon-spelling">{{etymon.spelling}}</view>
 
   <!-- meaning -->
   <view class="section etymon-info">
     <view class="title">
       解释
     </view>
-    <view class="info">
-      {{etymon.meaning}}
-    </view>
+    <view class="info">{{etymon.meaning}}</view>
   </view>
 
   <!-- source -->

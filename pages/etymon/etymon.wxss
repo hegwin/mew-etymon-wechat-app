@@ -1,5 +1,5 @@
 .etymon-spelling {
-  padding: 30rpx 40rpx;
+  margin: 30rpx 40rpx;
   font-size: 48rpx;
   color: #FF8C00;
 }
@@ -20,6 +20,12 @@
   color: #666666;
 }
 
+.etymon-info .info:empty {
+  height: 28rpx;
+  background: linear-gradient(to right, white, #E8E8E8, white);
+  animation: loading-bar linear 3s infinite;
+}
+
 .etymon-info .info .paragraph:not(:last-child) {
   margin-bottom: 10rpx;
 }
@@ -27,4 +33,10 @@
 .word .spelling {
   color: #FF8C00;
   margin-right: 28rpx;
+}
+
+@keyframes loading-bar {
+  100% {
+    background-position-x: calc(0% + 600rpx);
+  }
 }
